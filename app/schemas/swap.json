@@ -1,0 +1,25 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Swap Tokens",
+  "required": ["recipiant", "amount", "token"],
+  "additionalProperties": false,
+  "properties": {
+    "recipiant": {
+      "type": "string",
+      "title": "Wallet ID",
+      "pattern": "^B-[a-zA-Z0-9]+$",
+      "maxLength": 100
+    },
+    "amount": {
+      "type": "string",
+      "title": "amount",
+      "pattern": "^[1-9]\\d*$"
+    },
+    "token": {
+      "type": "string",
+      "title": "token nuame",
+      "pattern": "^(?=.{3,20}$)[a-zA-Z0-9]+([-\\s]{0,1}[a-zA-Z0-9]+)$"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Recover User schema",
+  "required": ["userId", "mnemonic"],
+  "additionalProperties": false,
+  "properties": {
+    "userId": {
+      "type": "string",
+      "title": "user Id",
+      "pattern": "^[a-zA-Z0-9!@#+=._-]+$"
+    },
+    "mnemonic": {
+      "type": "string",
+      "title": "mnemonic",
+      "pattern": "^[a-zA-Z\\s]*$"
+    }
+  }
+}

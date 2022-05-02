@@ -1,0 +1,19 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Token Issue fees Schema",
+  "required": ["newFee", "tokenType"],
+  "additionalProperties": false,
+  "properties": {
+    "newFee": {
+      "type": "string",
+      "title": "amount",
+      "pattern": "^[1-9]\\d*$"
+    },
+    "tokenType": {
+      "type": "string",
+      "title": "tokenType",
+      "enum": ["BUSY20", "NFT", "GAME"]
+    }
+  }
+}

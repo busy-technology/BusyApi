@@ -1,0 +1,44 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Issue Token Schema",
+  "additionalProperties": false,
+  "required": [
+    "account",
+    "operator",
+    "tokenSymbol",
+    "amount",
+    "credentials",
+    "recipient"
+  ],
+  "properties": {
+    "account": {
+      "type": "string",
+      "title": "account ID",
+      "pattern": "^B-[a-zA-Z0-9]+$"
+    },
+    "operator": {
+      "type": "string",
+      "title": "Operator ID",
+      "pattern": "^B-[a-zA-Z0-9]+$"
+    },
+    "credentials": {
+      "$ref": "Credentials.json#/definitions/Credentials"
+    },
+    "tokenSymbol": {
+      "type": "string",
+      "title": "token symbols",
+      "pattern": "^(?=.{3,20}$)[a-zA-Z0-9]+([-\\s]{0,1}[a-zA-Z0-9]+)$"
+    },
+    "recipient": {
+      "type": "string",
+      "title": "Recipient ID",
+      "pattern": "^B-[a-zA-Z0-9]+$"
+    },
+    "amount": {
+      "type": "string",
+      "title": "totalSupply",
+      "pattern": "^[1-9]\\d*$"
+    }
+  }
+}

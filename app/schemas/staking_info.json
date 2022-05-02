@@ -1,0 +1,14 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Send Message Request Schema",
+  "additionalProperties": false,
+  "required": ["walletId"],
+  "properties": {
+    "walletId": {
+      "type": "string",
+      "title": "User ID",
+      "pattern": "^B-[a-zA-Z0-9]+$"
+    }
+  }
+}

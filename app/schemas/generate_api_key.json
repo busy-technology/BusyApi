@@ -1,0 +1,14 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Generate API key",
+  "required": ["userNickname"],
+  "additionalProperties": false,
+  "properties": {
+    "userNickname": {
+      "type": "string",
+      "title": "User Nick Name",
+      "maxLength": 100
+    }
+  }
+}

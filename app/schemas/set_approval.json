@@ -1,0 +1,26 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Set Approval Schema",
+  "required": ["walletId", "credentials", "operator", "approved"],
+  "additionalProperties": false,
+  "properties": {
+    "walletId": {
+      "type": "string",
+      "title": "account ID",
+      "pattern": "^B-[a-zA-Z0-9]+$"
+    },
+    "operator": {
+      "type": "string",
+      "title": "Operator ID",
+      "pattern": "^B-[a-zA-Z0-9]+$"
+    },
+    "credentials": {
+      "$ref": "Credentials.json#/definitions/Credentials"
+    },
+    "approved": {
+      "type": "string",
+      "enum": ["true", "false"]
+    }
+  }
+}

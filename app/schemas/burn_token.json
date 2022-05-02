@@ -1,0 +1,27 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Burn Tokens",
+  "required": ["walletId", "amount", "token", "credentials"],
+  "additionalProperties": false,
+  "properties": {
+    "walletId": {
+      "type": "string",
+      "title": "Wallet ID",
+      "pattern": "^B-[a-zA-Z0-9]+$"
+    },
+    "credentials": {
+      "$ref": "Credentials.json#/definitions/Credentials"
+    },
+    "amount": {
+      "type": "string",
+      "title": "amount",
+      "pattern": "^[1-9]\\d*$"
+    },
+    "token": {
+      "type": "string",
+      "title": "token Symbol",
+      "pattern": "^(?=.{3,5}$)(?=.*[a-zA-Z])[a-zA-Z0-9]+([-]{0,1}[a-zA-Z0-9]+)$"
+    }
+  }
+}

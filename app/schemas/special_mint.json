@@ -1,0 +1,35 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Special Token Schema",
+  "required": ["walletId", "nftName", "credentials", "metaData"],
+  "additionalProperties": false,
+  "properties": {
+    "walletId": {
+      "type": "string",
+      "title": "Wallet ID",
+      "pattern": "^B-[a-zA-Z0-9]+$"
+    },
+    "credentials": {
+      "$ref": "Credentials.json#/definitions/Credentials"
+    },
+    "nftName": {
+      "type": "string",
+      "title": "nftName symbols"
+    },
+    "metaData": {
+      "type": "object",
+      "title": "metaData",
+      "required": ["image", "description"],
+      "properties": {
+        "image": {
+          "type": "string",
+          "title": "image"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

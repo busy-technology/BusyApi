@@ -1,0 +1,49 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Register User schema",
+  "required": ["userId", "password", "confirmPassword"],
+  "additionalProperties": false,
+  "properties": {
+    "userId": {
+      "type": "string",
+      "title": "user Id",
+      "pattern": "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$"
+    },
+    "mobile": {
+      "type": "string",
+      "title": "mobile",
+      "pattern": "^$|^\\+[1-9]{1}[0-9]{3,14}$"
+    },
+    "firstName": {
+      "type": "string",
+      "title": "first name",
+      "pattern": "^$|^[a-zA-Z\\s]*$"
+    },
+    "lastName": {
+      "type": "string",
+      "title": "last name",
+      "pattern": "^$|^[a-zA-Z\\s]*$"
+    },
+    "country": {
+      "type": "string",
+      "title": "country",
+      "pattern": "^$|^[a-zA-Z\\s]*$"
+    },
+    "password": {
+      "type": "string",
+      "title": "password",
+      "pattern": "^\\$2[ayb]\\$.{56}$"
+    },
+    "confirmPassword": {
+      "type": "string",
+      "title": "confirm password",
+      "pattern": "^\\$2[ayb]\\$.{56}"
+    },
+    "email": {
+      "type": "string",
+      "title": "email",
+      "pattern": "^$|^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"
+    }
+  }
+}

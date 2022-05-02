@@ -1,0 +1,14 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Query Wallet Schema",
+  "required": ["walletId"],
+  "additionalProperties": false,
+  "properties": {
+    "walletId": {
+      "type": "string",
+      "title": "Wallet ID",
+      "pattern": "^B-[a-zA-Z0-9]+$"
+    }
+  }
+}

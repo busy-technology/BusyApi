@@ -1,0 +1,14 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Transfer fees Schema",
+  "required": ["newTransferFee"],
+  "additionalProperties": false,
+  "properties": {
+    "newTransferFee": {
+      "type": "string",
+      "title": "amount",
+      "pattern": "^[1-9]\\d*$"
+    }
+  }
+}

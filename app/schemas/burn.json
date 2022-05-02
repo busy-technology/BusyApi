@@ -1,0 +1,23 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Burn Busy",
+  "additionalProperties": false,
+  "required": ["walletId", "amount", "token"],
+  "properties": {
+    "walletId": {
+      "type": "string",
+      "title": "Wallet ID"
+    },
+    "amount": {
+      "type": "string",
+      "title": "amount",
+      "pattern": "^[1-9]\\d*$"
+    },
+    "token": {
+      "type": "string",
+      "title": "token nuame",
+      "enum": ["BUSY"]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Set Approval Schema",
+  "required": ["walletId", "tokenSymbol"],
+  "additionalProperties": false,
+  "properties": {
+    "walletId": {
+      "type": "string",
+      "title": "account ID",
+      "pattern": "^B-[a-zA-Z0-9]+$"
+    },
+    "tokenSymbol": {
+      "type": "string",
+      "title": "token symbols",
+      "pattern": "^(?=.{3,5}$)(?=.*[a-zA-Z])[a-zA-Z0-9]+([-]{0,1}[a-zA-Z0-9]+)$"
+    }
+  }
+}

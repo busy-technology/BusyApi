@@ -1,0 +1,17 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Claim Tokens schema",
+  "additionalProperties": false,
+  "required": ["stakingAddr", "credentials"],
+  "properties": {
+    "stakingAddr": {
+      "type": "string",
+      "title": "Staking Address ID",
+      "maxLength": 100
+    },
+    "credentials": {
+      "$ref": "Credentials.json#/definitions/Credentials"
+    }
+  }
+}

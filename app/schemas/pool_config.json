@@ -1,0 +1,29 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Pool Request Schema",
+  "additionalProperties": false,
+  "required": ["minimumCoins", "poolFee", "votingPeriod", "votingStartTime"],
+  "properties": {
+    "minimumCoins": {
+      "type": "string",
+      "title": "minimum Coins",
+      "pattern": "^[1-9]\\d*$"
+    },
+    "poolFee": {
+      "type": "string",
+      "title": "Pool fee",
+      "pattern": "^[1-9]\\d*$"
+    },
+    "votingPeriod": {
+      "type": "string",
+      "title": "Voting Period",
+      "pattern": "^[0-9]+$"
+    },
+    "votingStartTime": {
+      "type": "string",
+      "title": "Voting Start time",
+      "pattern": "^[0-9]+$"
+    }
+  }
+}

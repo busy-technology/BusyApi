@@ -1,0 +1,14 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Message fees Schema",
+  "additionalProperties": false,
+  "required": ["newFee"],
+  "properties": {
+    "newFee": {
+      "type": "string",
+      "title": "amount",
+      "pattern": "^[1-9]\\d*$"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Send Message Request Schema",
+  "required": ["sender", "credentials", "recipient"],
+  "additionalProperties": false,
+  "properties": {
+    "sender": {
+      "type": "string",
+      "title": "Sender wallet ID",
+      "pattern": "^B-[a-zA-Z0-9]+$"
+    },
+    "credentials": {
+      "$ref": "Credentials.json#/definitions/Credentials"
+    },
+    "recipient": {
+      "type": "string",
+      "title": "Recipient wallet ID",
+      "pattern": "^B-[a-zA-Z0-9]+$"
+    }
+  }
+}

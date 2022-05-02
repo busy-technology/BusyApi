@@ -1,0 +1,24 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Register Peer Schema",
+  "additionalProperties": false,
+  "required": ["peerName", "password", "confirmPassword"],
+  "properties": {
+    "peerName": {
+      "type": "string",
+      "title": "user Id",
+      "pattern": "^[a-zA-Z0-9!@#+=._-]+$"
+    },
+    "password": {
+      "type": "string",
+      "title": "password",
+      "pattern": "^\\$2[ayb]\\$.{56}$"
+    },
+    "confirmPassword": {
+      "type": "string",
+      "title": "confirm password",
+      "pattern": "^\\$2[ayb]\\$.{56}"
+    }
+  }
+}

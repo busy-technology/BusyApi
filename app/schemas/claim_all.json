@@ -1,0 +1,18 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Claim All Schema",
+  "additionalProperties": false,
+  "required": ["walletId", "credentials"],
+  "properties": {
+    "walletId": {
+      "type": "string",
+      "title": "Wallet ID",
+      "pattern": "^B-[a-zA-Z0-9]+$",
+      "maxLength": 100
+    },
+    "credentials": {
+      "$ref": "Credentials.json#/definitions/Credentials"
+    }
+  }
+}

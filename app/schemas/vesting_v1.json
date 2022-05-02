@@ -1,0 +1,34 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Vesting V1 Schema",
+  "required": ["recipient", "amount", "numerator", "denominator", "releaseAt"],
+  "additionalProperties": false,
+  "properties": {
+    "recipient": {
+      "type": "string",
+      "title": "recipient ID",
+      "pattern": "^B-[a-zA-Z0-9]+$"
+    },
+    "amount": {
+      "type": "string",
+      "title": "minimum Coins",
+      "pattern": "^[1-9]\\d*$"
+    },
+    "numerator": {
+      "type": "string",
+      "title": "numerator",
+      "pattern": "^[0-9]+$"
+    },
+    "denominator": {
+      "type": "string",
+      "title": "denominator",
+      "pattern": "^[0-9]+$"
+    },
+    "releaseAt": {
+      "type": "string",
+      "title": "release At",
+      "pattern": "^[0-9]+$"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Pool Request Schema",
+  "additionalProperties": false,
+  "required": ["walletId", "credentials", "poolName", "poolDescription"],
+  "properties": {
+    "walletId": {
+      "type": "string",
+      "title": "Wallet ID",
+      "pattern": "^B-[a-zA-Z0-9]+$"
+    },
+    "credentials": {
+      "$ref": "Credentials.json#/definitions/Credentials"
+    },
+    "poolName": {
+      "type": "string",
+      "title": "pool name",
+      "pattern": "^[a-zA-Z0-9_ ]*$",
+      "maxLength": 30
+    },
+    "poolDescription": {
+      "type": "string",
+      "title": "pool Description",
+      "maxLength": 500
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Issue Token Schema",
+  "additionalProperties": false,
+  "required": [
+    "walletId",
+    "tokenSymbols",
+    "totalSupplies",
+    "credentials",
+    "metaDatas"
+  ],
+  "properties": {
+    "walletId": {
+      "type": "string",
+      "title": "Wallet ID",
+      "pattern": "^B-[a-zA-Z0-9]+$"
+    },
+    "credentials": {
+      "$ref": "Credentials.json#/definitions/Credentials"
+    },
+    "tokenSymbols": {
+      "type": "array",
+      "title": "token symbols",
+      "items": {
+        "type": "string",
+        "pattern": "^(?=.{3,5}$)(?=.*[a-zA-Z])[a-zA-Z0-9]+([-]{0,1}[a-zA-Z0-9]+)$"
+      }
+    },
+    "metaDatas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "metaData",
+        "required": ["logo", "name", "type"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "token Name",
+            "pattern": "^(?=.{3,20}$)(?=.*[a-zA-Z])[a-zA-Z0-9]+([-\\s]{0,1}[a-zA-Z0-9]+)"
+          },
+          "logo": {
+            "type": "string",
+            "title": "logo"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["NFT", "GAME"]
+          }
+        }
+      }
+    },
+    "totalSupplies": {
+      "type": "array",
+      "title": "totalSupplies",
+      "items": {
+        "type": "string",
+        "pattern": "^[1-9]\\d*$"
+      }
+    }
+  }
+}

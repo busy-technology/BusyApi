@@ -1,0 +1,53 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Issue Token Schema",
+  "additionalProperties": false,
+  "required": [
+    "walletId",
+    "tokenSymbol",
+    "totalSupply",
+    "credentials",
+    "metaData"
+  ],
+  "properties": {
+    "walletId": {
+      "type": "string",
+      "title": "Wallet ID",
+      "pattern": "^B-[a-zA-Z0-9]+$"
+    },
+    "credentials": {
+      "$ref": "Credentials.json#/definitions/Credentials"
+    },
+    "tokenSymbol": {
+      "type": "string",
+      "title": "token symbols",
+      "pattern": "^(?=.{3,5}$)(?=.*[a-zA-Z])[a-zA-Z0-9]+([-]{0,1}[a-zA-Z0-9]+)$"
+    },
+    "metaData": {
+      "type": "object",
+      "title": "metaData",
+      "required": ["logo", "name", "type"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "token Name",
+          "pattern": "^(?=.{3,20}$)(?=.*[a-zA-Z])[a-zA-Z0-9]+([-\\s]{0,1}[a-zA-Z0-9]+)"
+        },
+        "logo": {
+          "type": "string",
+          "title": "logo"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["NFT", "GAME"]
+        }
+      }
+    },
+    "totalSupply": {
+      "type": "string",
+      "title": "totalSupply",
+      "pattern": "^[1-9]\\d*$"
+    }
+  }
+}

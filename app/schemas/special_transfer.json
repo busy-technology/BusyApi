@@ -1,0 +1,26 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Issue Token Schema",
+  "required": ["sender", "nftName", "credentials", "recipient"],
+  "additionalProperties": false,
+  "properties": {
+    "sender": {
+      "type": "string",
+      "title": "account ID",
+      "pattern": "^B-[a-zA-Z0-9]+$"
+    },
+    "credentials": {
+      "$ref": "Credentials.json#/definitions/Credentials"
+    },
+    "nftName": {
+      "type": "string",
+      "title": "token symbols"
+    },
+    "recipient": {
+      "type": "string",
+      "title": "Recipient ID",
+      "pattern": "^B-[a-zA-Z0-9]+$"
+    }
+  }
+}

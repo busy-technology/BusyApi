@@ -1,0 +1,39 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Pool Vote Schema",
+  "additionalProperties": false,
+  "required": [
+    "walletId",
+    "credentials",
+    "votingAddress",
+    "amount",
+    "voteType"
+  ],
+  "properties": {
+    "walletId": {
+      "type": "string",
+      "title": "Wallet ID",
+      "pattern": "^B-[a-zA-Z0-9]+$"
+    },
+    "credentials": {
+      "$ref": "Credentials.json#/definitions/Credentials"
+    },
+    "amount": {
+      "type": "string",
+      "title": "vote amount",
+      "pattern": "^[1-9]\\d*$"
+    },
+    "votingAddress": {
+      "type": "string",
+      "title": "Wallet ID",
+      "pattern": "^[a-zA-Z0-9]+$",
+      "maxLength": 100
+    },
+    "voteType": {
+      "type": "string",
+      "title": "Vote type",
+      "enum": ["Yes", "No"]
+    }
+  }
+}

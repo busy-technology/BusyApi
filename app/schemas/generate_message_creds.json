@@ -1,0 +1,15 @@
+{
+  "definitions": {},
+  "type": "object",
+  "title": "Generate Message Creds Schema",
+  "additionalProperties": false,
+  "required": ["walletId"],
+  "properties": {
+    "walletId": {
+      "type": "string",
+      "title": "Wallet ID",
+      "pattern": "^B-[a-zA-Z0-9]+$",
+      "maxLength": 100
+    }
+  }
+}
