@@ -56,7 +56,6 @@ module.exports = async (req, res) => {
         votingAddress,
         amount,
         voteType,
-        constants.BUSY_TOKEN,
       );
 
       const resp = JSON.parse(response);

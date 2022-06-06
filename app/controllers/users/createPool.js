@@ -56,7 +56,6 @@ module.exports = async (req, res) => {
         walletId,
         poolName,
         poolDescription,
-        constants.BUSY_TOKEN,
       );
       const resp = JSON.parse(response);
 

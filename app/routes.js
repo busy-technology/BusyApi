@@ -108,12 +108,7 @@ module.exports = (server) => {
     validator('body', 'getTotalSupply'),
     controller.users.totalSupply,
   );
-  server.post(
-    '/updateTransferFees',
-    auth,
-    validator('body', 'updateTransferFees'),
-    controller.users.transferFee,
-  );
+
   server.post('/burn', auth, validator('body', 'burn'), controller.users.burn);
 
   server.post(

@@ -12,7 +12,6 @@ module.exports = {
     unstake: require('./users/unstake'),
     issue: require('./users/issue'),
     totalSupply: require('./users/totalSupply'),
-    transferFee: require('./users/transferFees'),
     burn: require('./admin/burn'),
     burnTokens: require('./users/burnTokens'),
     vesting1: require('./admin/vestingV1'),

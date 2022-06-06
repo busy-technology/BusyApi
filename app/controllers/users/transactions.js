@@ -78,6 +78,7 @@ module.exports = async (req, res) => {
       });
     } else {
       query = await Transactions.find({
+        blockNum: { $lt: endBlock, $gt: startBlock },
         $or: [
           {
             transactionFee: {
@@ -193,6 +194,7 @@ module.exports = async (req, res) => {
     } else {
       query = await Transactions.find({
         $and: [
+          { blockNum: { $lt: endBlock, $gt: startBlock } },
           {
             $or: [
               {
